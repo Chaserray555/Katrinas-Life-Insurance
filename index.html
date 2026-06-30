@@ -6,27 +6,24 @@
     <title>Katrina's Insurance help</title>
     
     <style>
-      /* 1. This handles the dark background and sets up the layout */
       body {
         background-color: #0A2540; /* Official Corporate Deep Navy Blue */
-        color: #FFFFFF;            /* Makes all text clean and readable */
+        color: #FFFFFF;            /* Clean white text */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 20px;
-        text-align: center;        /* Centers everything beautifully */
+        text-align: center;        
       }
 
-      /* Wrapper to keep content clean on both phones and computers */
       .page-container {
         max-width: 600px;
         margin: 0 auto;
       }
 
-      /* 2. Styling the Corporate Link Button to make it pop */
       .btn-link {
         display: inline-block;
         background-color: #D4AF37; /* Metallic Gold Accent */
-        color: #0A2540;            /* Dark text inside button for contrast */
+        color: #0A2540;            
         text-decoration: none;
         font-weight: bold;
         padding: 12px 24px;
@@ -41,7 +38,6 @@
         transform: translateY(-1px);
       }
 
-      /* 3. Typography Adjustments */
       h1 {
         font-size: 1.8rem;
         color: #FFFFFF;
@@ -51,29 +47,70 @@
       h3 {
         font-weight: normal;
         line-height: 1.6;
-        color: #cbd5e0; /* Slightly lighter gray-white for easy reading */
+        color: #cbd5e0; 
         font-size: 1rem;
       }
 
       h4 {
-        color: #D4AF37; /* Gold emphasis for her core statement */
+        color: #D4AF37; 
         font-size: 1.1rem;
         margin: 25px 0;
       }
 
-      /* 4. Responsive Images (Stops them from breaking mobile screens) */
       img {
         max-width: 100%;
         height: auto;
-        border-radius: 8px; /* Smooths the sharp corners of her images */
+        border-radius: 8px; 
         margin-bottom: 15px;
       }
 
       .logo-img {
-        max-width: 200px; /* Keeps the main logo at a sleek size */
+        max-width: 200px; 
         margin-top: 10px;
       }
+
+      /* Developer Section Styles */
+      .dev-toggle-btn {
+        background: transparent; 
+        color: #a0aec0; 
+        border: 1px solid #a0aec0; 
+        padding: 8px 16px; 
+        border-radius: 20px; 
+        cursor: pointer; 
+        font-size: 0.85rem;
+        transition: 0.2s;
+      }
+
+      .dev-toggle-btn:hover {
+        color: #ffffff;
+        border-color: #ffffff;
+      }
+
+      #dev-info {
+        display: none; 
+        max-width: 500px; 
+        margin: 15px auto 0 auto; 
+        background: rgba(255, 255, 255, 0.05); 
+        padding: 15px; 
+        border-radius: 8px; 
+        font-size: 0.9rem; 
+        text-align: left; 
+        line-height: 1.5; 
+        color: #cbd5e0;
+      }
     </style>
+
+    <script>
+      // Function to open/close the developer bio box
+      function toggleDevInfo() {
+        var infoBox = document.getElementById("dev-info");
+        if (infoBox.style.display === "none") {
+          infoBox.style.display = "block";
+        } else {
+          infoBox.style.display = "none";
+        }
+      }
+    </script>
   </head>
   <body>
 
@@ -88,9 +125,21 @@
       <h3>Here at World Finance Group Insurance Agency, we are dedicated to helping you navigate the complexities of insurance. Our team of experts is here to provide you with personalized assistance and guidance.</h3>
       
       <h4>We can help you protect your loved ones when they are weakest.</h4>
+      <h4> Call me at 562-360-8371</h4>
       
       <img src="images/buisness.png" alt="Business Consultation">
       <img src="images/nurse.png" alt="Medical Protection">
+
+      <!-- Developer Section -->
+      <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px;">
+        <button onclick="toggleDevInfo()" class="dev-toggle-btn">
+          Meet the Web Page runner
+        </button>
+        
+        <div id="dev-info">
+           Hi, im <strong>Chase Vanhoff</strong>, the person who built this page for my moms buisness. I love to help my mom with everything and i wanted to make her a page that would help her clients reach out to her and her buisness. :)
+        </div>
+      </div>
     </div>
       
   </body>
