@@ -6,11 +6,17 @@
     <title>Katrina's Insurance help</title>
     
     <style>
-      body {
+      /* Forces the deep navy blue to fill 100% of the screen height */
+      html, body {
         background-color: #0A2540; /* Official Corporate Deep Navy Blue */
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
         color: #FFFFFF;            /* Clean white text */
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
         padding: 20px;
         text-align: center;        
       }
@@ -101,7 +107,7 @@
     </style>
 
     <script>
-      // Function to open/close the developer bio box
+      // Toggle function for the developer bio
       function toggleDevInfo() {
         var infoBox = document.getElementById("dev-info");
         if (infoBox.style.display === "none") {
@@ -115,30 +121,33 @@
   <body>
 
     <div class="page-container">
+      <!-- Main Logo -->
       <img src="images/logo.png" alt="Our Company" class="logo-img">
       
       <br>
+      <!-- Action Button -->
       <a href="https://www.worldfinancialgroup.com/" class="btn-link">Go to World Financial Group</a>
       
+      <!-- Headings -->
       <h1>Welcome to Katrina's Insurance Help</h1>
       
       <h3>Here at World Finance Group Insurance Agency, we are dedicated to helping you navigate the complexities of insurance. Our team of experts is here to provide you with personalized assistance and guidance.</h3>
       
       <h4>We can help you protect your loved ones when they are weakest.</h4>
-      <h4> Call me at 562-360-8371</h4>
+      <h4> Call us at (562-360-8371)</h4>
       
+      <!-- Body Images -->
       <img src="images/buisness.png" alt="Business Consultation">
       <img src="images/nurse.png" alt="Medical Protection">
 
-      <!-- Developer Section -->
+      <!-- Under-sold Developer Profile Button -->
       <div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px;">
         <button onclick="toggleDevInfo()" class="dev-toggle-btn">
-          Meet the Web Page runner
+          About the Author
         </button>
         
         <div id="dev-info">
-           Hi, im <strong>Chase Vanhoff</strong>, the person who built this page for my moms buisness. I love to help my mom with everything and i wanted to make her a page that would help her clients reach out to her and her buisness. :)
-        </div>
+          I am <strong>Chase Vanhoff</strong>, the person who built this page for my moms buisness. I love to help my mom with everything and i wanted to make her a page that would help her clients reach out to her and her buisness. :)
       </div>
     </div>
       
